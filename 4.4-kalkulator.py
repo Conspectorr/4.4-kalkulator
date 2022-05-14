@@ -1,19 +1,19 @@
 import sys
 import logging
-logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s', filename="kalkulator-log.log")
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 print("Witaj w tym prostym kalkulatorze, co chciałbyś policzyć?")
-działanie = input("Podaj działanie, posługując się odpowiednią liczbą: 1- dodawanie, 2- odejmowanie, 3- mnożenie, 4- dzielenie: ")
+działanie = input("Podaj działanie, posługując się odpowiednią liczbą:  \n1- dodawanie,  \n2- odejmowanie,  \n3- mnożenie,  \n4- dzielenie:  \n")
 def kalkulator(działanie):
-    liczba1 = ("Podaj składnik 1: ")
-    liczba2 = ("Podaj składnik 2: ")
+    liczba1 = input("Podaj składnik 1: ")
+    liczba2 = input("Podaj składnik 2: ")
     if działanie == "1":
-        print("Wykonasz dodawanie")
+        logging.info("Wykonasz dodawanie %s i %s" % (liczba1, liczba2))
     elif działanie == "2":
-        print("Wykonasz odejmowanie")
+        logging.info("Wykonasz odejmowanie %s i %s" % (liczba1, liczba2))
     elif działanie == "3":
-        print("Wykonasz mnożenie")
+        logging.info("Wykonasz dzielenie %s i %s" % (liczba1, liczba2))
     elif działanie == "4":
-        print("Wykonasz dzielenie")
+        logging.info("Wykonasz mnożenie %s i %s" % (liczba1, liczba2))
 
 kalkulator(działanie)
